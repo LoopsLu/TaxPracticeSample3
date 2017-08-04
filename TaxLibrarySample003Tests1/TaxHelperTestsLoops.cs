@@ -24,5 +24,23 @@ namespace TaxLibrarySample003Tests1
             decimal expected = 27000;
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void GetTaxResultTest_Income_540001_Tax_27000p12()
+        {
+            decimal income = 540001;
+            decimal actual = TaxHelper.GetTaxResult(income);
+            decimal expected = 27000.12m;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void GetTaxResultTest_Income_1210000_Tax_107400()
+        {
+            decimal income = 1210000;
+            decimal actual = TaxHelper.GetTaxResult(income);
+            decimal expected = 107400;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
