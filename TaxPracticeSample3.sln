@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxLibrarySample002Tests1",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexLibrarySample003", "TexLibrarySample003\TexLibrarySample003.csproj", "{0B99269B-9186-449B-B1C4-E861529A3027}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxLibrarySample003Tests1", "TaxLibrarySample003Tests1\TaxLibrarySample003Tests1.csproj", "{DDEED458-A836-4148-A628-FDBA20EF793D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0B99269B-9186-449B-B1C4-E861529A3027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B99269B-9186-449B-B1C4-E861529A3027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B99269B-9186-449B-B1C4-E861529A3027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDEED458-A836-4148-A628-FDBA20EF793D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDEED458-A836-4148-A628-FDBA20EF793D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDEED458-A836-4148-A628-FDBA20EF793D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDEED458-A836-4148-A628-FDBA20EF793D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
