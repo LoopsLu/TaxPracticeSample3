@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TexLibrarySample003;
+using System.Collections.Generic;
 
 namespace TaxLibrarySample003Tests1
 {

@@ -8,39 +8,33 @@ namespace TexLibrarySample003
 {
     public class TaxHelper
     {
+        private static List<decimal> _r = new List<decimal>()
+        { 0m, 0m, 540000m, 1210000m, 2420000m};
+
+        private static List<decimal> _f = new List<decimal>()
+        { 0m, 0.05m, 0.12m, 0.2m};
+
         public static decimal GetTaxResult(decimal income)
         {
             var result = 0m;
+            
+            if (income > _r[1])
+                result += (_r[1] - _r[0]) * _f[0];
 
-            var r0 = 0m;
-            var r1 = 0m;
-            var f0 = 0m;
-            var f1 = 0.05m;
+            if (income > _r[1] && income <= _r[2])
+                result += (income - _r[1]) * _f[1];
 
-            if (income > 0)
-                result += (r1 - r0) * f0;
+            if (income > _r[2])
+                result += (_r[2] - _r[1]) * _f[1];
 
-            if (income > 0 && income <= 540000)
-                result += (income - r1) * f1;
+            if (income > _r[2] && income <= _r[3])
+                result += (income - _r[2]) * _f[2];
 
-            var r2 = 540000m;
-            var f2 = 0.12m;
-            var r3 = 1210000m;
-            var f3 = 0.2m;
+            if (income > _r[3])
+                result += (_r[3] - _r[2]) * _f[2];
 
-            if (income > r2)
-                result += (r2 - r1) * f1;
-
-            if (income > r2 && income <= r3)
-                result += (income - r2) * f2;
-
-            if (income > r3)
-                result += (r3 - r2) * f2;
-
-            var r4 = 2420000;
-
-            if (income > r3 && income <= r4)
-                result += (income - r3) * f3;
+            if (income > _r[3] && income <= _r[4])
+                result += (income - _r[3]) * _f[3];
 
             return result;
         }
