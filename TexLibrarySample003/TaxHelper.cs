@@ -18,7 +18,7 @@ namespace TexLibrarySample003
         {
             var result = 0m;
 
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 if (income > _r[i])
                     result += (_r[i] - _r[i - 1]) * _f[i - 1];
