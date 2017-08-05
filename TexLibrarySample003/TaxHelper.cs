@@ -22,6 +22,8 @@ namespace TexLibrarySample003
             {
                 if (income > _r[i])
                     result += (_r[i] - _r[i - 1]) * _f[i - 1];
+                else
+                    break;
 
                 if (income > _r[i] && income <= _r[i + 1])
                     result += (income - _r[i]) * _f[i];
