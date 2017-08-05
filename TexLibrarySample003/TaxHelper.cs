@@ -18,26 +18,14 @@ namespace TexLibrarySample003
         {
             var result = 0m;
 
-            var i = 1;
-            if (income > _r[i])
-                result += (_r[i] - _r[i-1]) * _f[i-1];
+            for (int i = 1; i <= _f.Count; i++)
+            {
+                if (income > _r[i])
+                    result += (_r[i] - _r[i - 1]) * _f[i - 1];
 
-            if (income > _r[i] && income <= _r[i+1])
-                result += (income - _r[i]) * _f[i];
-
-            i = 2;
-            if (income > _r[i])
-                result += (_r[i] - _r[i-1]) * _f[i-1];
-
-            if (income > _r[i] && income <= _r[i+1])
-                result += (income - _r[i]) * _f[i];
-
-            i = 3;
-            if (income > _r[i])
-                result += (_r[i] - _r[i - 1]) * _f[i - 1];
-
-            if (income > _r[i] && income <= _r[i + 1])
-                result += (income - _r[i]) * _f[i];
+                if (income > _r[i] && income <= _r[i + 1])
+                    result += (income - _r[i]) * _f[i];
+            }
 
             return result;
         }
